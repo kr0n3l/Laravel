@@ -55,10 +55,6 @@
                             <li>
                                 <a href="/admin/control/sueldos/profesores">Profesores</a>
                             </li>
-                                
-                            {{--  <li>
-                                <a href="/admin/control/sueldos/otros">Otros</a>
-                            </li>  --}}
                         </ul>
                     </li>
                     <li>
@@ -72,9 +68,7 @@
         </div>
     <!-- Page Content -->
     <div id="page-wrapper">
-        
-            @yield('content3')
-
+        @yield('content3')
     </div>
 </div>
     

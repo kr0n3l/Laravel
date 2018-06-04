@@ -119,3 +119,5 @@ Route::get('/admin/control/sueldos/otros', 'ControlController@sueldos')->name('c
 Route::post('/admin/control/sueldos/profesores/{nombre}', 'ControlController@historial_sueldo');
 
 Route::post('/admin/control/sueldos/otros', 'ControlController@historial_sueldos');
+
+// nande (prueba commit)

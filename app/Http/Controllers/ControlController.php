@@ -78,7 +78,7 @@ class ControlController extends Controller
         return view('control.gastos.index', compact('controls', 'titulo', 'nombre', 'id_desc'));
     }
 
-    public function historial(Request $request)
+    public function historial_gastos(Request $request)
     {
         if (\Request::is('*/limpieza'))
         {
@@ -127,7 +127,7 @@ class ControlController extends Controller
         return view('control.sueldos.profesores', compact('users', 'titulo', 'tipo', 'trainers', 'services'));
     }
 
-    public function historial_sueldos(Request $request)
+    public function historial_sueldos_all(Request $request)
     {
         if (\Request::is('*/profesores'))
         {
@@ -153,7 +153,7 @@ class ControlController extends Controller
         return view('control.sueldos.profesores', compact('controls', 'titulo', 'tipo'));
     }
 
-    public function historial_sueldo(Request $request, $nombre)
+    public function historial_sueldos_one(Request $request, $nombre)
     {
         if (\Request::is('*/profesores/*'))
         {

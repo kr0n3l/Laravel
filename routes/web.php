@@ -98,9 +98,9 @@ Route::get('/admin/control/gastos/limpieza', 'ControlController@gastos')->name('
 
 Route::get('/admin/control/gastos/servicios', 'ControlController@gastos')->name('control.gastos.servicios');
 
-Route::post('/admin/control/gastos/limpieza', 'ControlController@historial');
+Route::post('/admin/control/gastos/limpieza', 'ControlController@historial_gastos');
 
-Route::post('/admin/control/gastos/servicios', 'ControlController@historial');
+Route::post('/admin/control/gastos/servicios', 'ControlController@historial_gastos');
 
 // Control.Sueldos
 
@@ -108,16 +108,17 @@ Route::get('/admin/control/sueldos/profesores', 'ControlController@sueldos')->na
 
 Route::get('/admin/control/sueldos/otros', 'ControlController@sueldos')->name('control.sueldos.otros');
 
-Route::post('/admin/control/sueldos/profesores', 'ControlController@historial_sueldos');
+Route::post('/admin/control/sueldos/profesores', 'ControlController@historial_sueldos_all');
 
-Route::post('/admin/control/sueldos/otros', 'ControlController@historial_sueldos');
+Route::post('/admin/control/sueldos/otros', 'ControlController@historial_sueldos_all');
 
-Route::get('/admin/control/sueldos/profesores/{nombre}', 'ControlController@sueldo')->name('control.sueldos.profesores');
 
-Route::get('/admin/control/sueldos/otros', 'ControlController@sueldos')->name('control.sueldos.otros');
+Route::get('/admin/control/sueldos/profesores/{nombre}', 'ControlController@historial_sueldos_one')->name('control.sueldos.profesor');
 
-Route::post('/admin/control/sueldos/profesores/{nombre}', 'ControlController@historial_sueldo');
+Route::get('/admin/control/sueldos/otros', 'ControlController@historial_sueldos_one')->name('control.sueldos.otros');
 
-Route::post('/admin/control/sueldos/otros', 'ControlController@historial_sueldos');
+//Route::post('/admin/control/sueldos/profesores/{nombre}', 'ControlController@historial_sueldo');
+
+//Route::post('/admin/control/sueldos/otros', 'ControlController@historial_sueldos');
 
 // nande (prueba commit)
